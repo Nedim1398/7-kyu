@@ -1,0 +1,18 @@
+public class Money {
+  public static int calculateYears(double principal, double interest,  double tax, double desired) {
+    int Y = 0;
+    double AI = 0;
+    if(principal >= desired){
+    return Y;
+    }
+    else{
+    while(principal < desired){
+    AI = principal * interest;
+    AI = AI * tax;
+    principal = principal + (principal * interest) - AI;
+    Y++;
+    }
+    return Y;
+    }
+  }
+}
